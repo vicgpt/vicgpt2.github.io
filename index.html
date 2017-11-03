@@ -181,9 +181,9 @@ inTest = training[-samp,]</code></pre>
 <p>Different model that will be used to train data and then predict on cross validation set are- 1. Decision trees 2. Bootstrap Aggregating (Bagging) 3. Random Forest 4. Boosting</p>
 <p>The best model out of these will be used for predicting on final test dataset containing 20 observations.</p>
 <p>Setting cross-validation for training the model</p>
-  <h2>ESTIMATING OUT OF SAMPLE ERROR</h2>
+<h2>ESTIMATING OUT OF SAMPLE ERROR</h2>
 <p>Cross validation can be used to calculate out of sample error for a model. Cross-validation is kind of the same idea as creating single training and testing sets; however, because a single training and testing set would yield unstable estimates due to their limited number of observations, one can create several testing and training sets using different parts of the data and average their estimates of model fit.</p>
-  <p> We have used k-fold cross validation choosing k=10 as choosing larger k would take longer time to run the models.  </p>
+<p> We have used k-fold cross validation choosing k=10 as choosing larger k would take longer time to run the models.  </p>
 </div>  
 <pre class="r"><code># Setting crossvalidation for bagging, boosting and random forest
 trainCV = trainControl(method = &quot;cv&quot;,number = 10)</code></pre>
