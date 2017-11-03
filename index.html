@@ -183,8 +183,7 @@ inTest = training[-samp,]</code></pre>
 <p>Setting cross-validation for training the model</p>
 <h2>ESTIMATING OUT OF SAMPLE ERROR</h2>
 <p>Cross validation can be used to calculate out of sample error for a model. Cross-validation is kind of the same idea as creating single training and testing sets; however, because a single training and testing set would yield unstable estimates due to their limited number of observations, one can create several testing and training sets using different parts of the data and average their estimates of model fit.</p>
-<p> We have used k-fold cross validation choosing k=10 as choosing larger k would take longer time to run the models.  </p>
-</div>  
+<p> We have used k-fold cross validation choosing k=10 as choosing larger k would take longer time to run the models.  </p>  
 <pre class="r"><code># Setting crossvalidation for bagging, boosting and random forest
 trainCV = trainControl(method = &quot;cv&quot;,number = 10)</code></pre>
 </div>
@@ -392,7 +391,7 @@ text(cm4$byClass[,1], cm4$byClass[,2], labels=LETTERS[1:5], cex= 0.8)</code></pr
 <div id="results" class="section level2">  
 <h2>RESULTS</h2>
 <p>Using Random forest, predicting on the final test dataset</p>
-  <p>The out of sample accuracy will be the accuracy from k-fold crossvalidated random forest i.e. 0.9991</p>
+  <p>The out of sample accuracy will be the accuracy from k-fold crossvalidated random forest i.e. 0.9991. So out of sample error is 0.0009</p>
 <pre class="r"><code># Random forest is choosen
 # predicting for final test set
 pred_final = predict(model_rf,newdata = testing)
